@@ -4,12 +4,15 @@ Loading data into the bronze layer tables.
 ===============================================
 
 Script purpose:
-	This script uses bulk load for loading data into the bronze layer tables. If
+	This stored procedure uses bulk load for loading data into the bronze layer tables. If
 	data exists, the tables are truncated. 
+
+Parameters:
+	None
+
+Usage example:
+	EXEC bronze.load_bronze
 */
-
-
--- EXEC bronze.load_bronze
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
