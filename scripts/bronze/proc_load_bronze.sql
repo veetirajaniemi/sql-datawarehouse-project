@@ -1,3 +1,14 @@
+/*
+===============================================
+Loading data into the bronze layer tables.
+===============================================
+
+Script purpose:
+	This script uses bulk load for loading data into the bronze layer tables. If
+	data exists, the tables are truncated. 
+*/
+
+
 -- EXEC bronze.load_bronze
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
