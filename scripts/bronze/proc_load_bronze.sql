@@ -28,11 +28,11 @@ BEGIN
 
 		SET @start_time = GETDATE();
 		SET @start_time_all = GETDATE();
-		PRINT '>> Truncating table bronze.crm_cust_info'
-		TRUNCATE TABLE bronze.crm_cust_info;
+		PRINT '>> Truncating table bronze.crm_cst_info'
+		TRUNCATE TABLE bronze.crm_cst_info;
 
-		PRINT '>> Inserting data into bronze.crm_cust_info'
-		BULK INSERT bronze.crm_cust_info
+		PRINT '>> Inserting data into bronze.crm_cst_info'
+		BULK INSERT bronze.crm_cst_info
 		FROM 'C:\Users\veeti\OneDrive - LUT University\SQL\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
 		WITH (
 			FIRSTROW = 2,
@@ -79,11 +79,11 @@ BEGIN
 		PRINT '---------------------------------';
 
 		SET @start_time = GETDATE();
-		PRINT '>> Truncating table bronze.erp_cust_info'
-		TRUNCATE TABLE bronze.erp_cust_info;
+		PRINT '>> Truncating table bronze.erp_cst_info'
+		TRUNCATE TABLE bronze.erp_cst_info;
 
-		PRINT '>> Inserting data into bronze.erp_cust_info'
-		BULK INSERT bronze.erp_cust_info
+		PRINT '>> Inserting data into bronze.erp_cst_info'
+		BULK INSERT bronze.erp_cst_info
 		FROM 'C:\Users\veeti\OneDrive - LUT University\SQL\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv'
 		WITH (
 			FIRSTROW = 2,
@@ -111,11 +111,11 @@ BEGIN
 		PRINT '>> -------------------'
 
 		SET @start_time = GETDATE();
-		PRINT '>> Truncating table bronze.erp_prod_info'
-		TRUNCATE TABLE bronze.erp_prod_info;
+		PRINT '>> Truncating table bronze.erp_prd_info'
+		TRUNCATE TABLE bronze.erp_prd_info;
 
-		PRINT '>> Inserting data into bronze.erp_prod_info'
-		BULK INSERT bronze.erp_prod_info
+		PRINT '>> Inserting data into bronze.erp_prd_info'
+		BULK INSERT bronze.erp_prd_info
 		FROM 'C:\Users\veeti\OneDrive - LUT University\SQL\sql-data-warehouse-project\datasets\source_erp\PX_CAT_G1V2.csv'
 		WITH (
 			FIRSTROW = 2,
