@@ -35,7 +35,7 @@ LEFT JOIN silver.erp_cst_info ci2
 ON	      ci.cst_key = ci2.cst_id
 LEFT JOIN silver.erp_loc_info li
 ON        ci.cst_key = li.cst_id
-
+GO
 
 IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
 	DROP VIEW gold.dim_products;
@@ -58,7 +58,7 @@ FROM silver.crm_prd_info pin
 LEFT JOIN silver.erp_prd_info AS pin2
 ON pin.cat_id = pin2.prd_id
 WHERE pin.prd_end_dt IS NULL -- filtering out historical data!
-
+GO
 
 IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
 	DROP VIEW gold.fact_sales;
